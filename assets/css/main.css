@@ -1,5 +1,9 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css');
 
+.github-fork-ribbon:before {
+    background-color: #000 !important;
+}
+
 /*-------------------- Body --------------------*/
 *, *::before, *::after {
 	box-sizing: border-box;
