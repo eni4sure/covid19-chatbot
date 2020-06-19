@@ -1,4 +1,4 @@
-# hngi7-chatbot
+# HNGi7-chatbot
 A chatbot built for hngi to qualify for stage 4 😴
 
 ## Preview
