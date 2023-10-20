@@ -1,70 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Ensure proper document rendering. Any other head element should come *after* these tags. -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Meta information for proper document rendering and SEO -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-	<!-- Force IE 8/9/10 to use its latest rendering engine -->
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Title and description for the document -->
+    <title>Covid-19 Bot - @eni4sure</title>
+    <meta name="title" content="Covid-19 Bot - @eni4sure">
+    <meta name="description" content="The right bot to get the latest details about Covid-19 in Nigeria 😉">
 
-	<title>Covid-19 Bot - @eni4sure</title>
+    <!-- Open Graph / Facebook tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eni4sure.github.io/hngi7-chatbot">
+    <meta property="og:title" content="Covid-19 Bot - @eni4sure">
+    <meta property="og:description" content="The right bot to get the latest details about Covid-19 in Nigeria 😉">
 
-	<!-- Short description of the document (limit to 150 characters) -->
-	<!-- Primary Meta Tags -->
-	<meta name="title" content="Covid-19 Bot - @eni4sure">
-	<meta name="description" content="The right bot to get the latest details about Covid-19 in Nigeria 😉">
+    <!-- Twitter tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://eni4sure.github.io/hngi7-chatbot">
+    <meta property="twitter:title" content="Covid-19 Bot - @eni4sure">
+    <meta property="twitter:description" content="The right bot to get the latest details about Covid-19 in Nigeria 😉">
 
-	<!-- Open Graph / Facebook -->
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://eni4sure.github.io/hngi7-chatbot">
-	<meta property="og:title" content="Covid-19 Bot - @eni4sure">
-	<meta property="og:description" content="The right bot to get the latest details about Covid-19 in Nigeria 😉">
+    <!-- Author Information links -->
+    <link rel="me" href="https://github.com/eni4sure" type="text/html">
+    <link rel="me" href="mailto:eosabiya@gmail.com">
 
-	<!-- Twitter -->
-	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="https://eni4sure.github.io/hngi7-chatbot">
-	<meta property="twitter:title" content="Covid-19 Bot - @eni4sure">
-	<meta property="twitter:description" content="The right bot to get the latest details about Covid-19 in Nigeria 😉">
+    <!-- Add to home screen tag for mobile web apps -->
+    <meta name="mobile-web-app-capable" content="yes">
 
-	<!-- Author Information -->
-	<link rel="me" href="https://github.com/eni4sure" type="text/html">
-	<link rel="me" href="mailto:eosabiya@gmail.com">
+    <!-- Shortcut Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/me.png">
 
-	<!-- Add to home screen -->
-	<meta name="mobile-web-app-capable" content="yes">
-
-	<!-- Shortcut Icon -->
-	<link rel="shortcut icon" type="image/x-icon" href="assets/img/me.png">
-
-	<!-- CSS Stylesheet -->
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 </head>
 <body>
+    <!-- GitHub ribbon link -->
+    <a class="github-fork-ribbon right-top" href="https://github.com/eni4sure" target="_blank" data-ribbon="Follow me on GitHub" title="Follow me on GitHub">Follow me on GitHub</a>
 
-	<a class="github-fork-ribbon right-top" href="https://github.com/eni4sure" target="_blank" data-ribbon="Follow me on GitHub" title="Follow me on GitHub">Follow me on GitHub</a>
+    <!-- Chatbot container -->
+    <div class="chat">
+        <!-- Chatbot header -->
+        <div class="chat-title">
+            <h1>Eni4sure [BOT]</h1>
+            <h2>Active</h2>
+            <div class="avatar">
+                <img src="assets/img/me.png" alt="Avatar Image" />
+            </div>
+        </div>
+        <!-- Chat messages container -->
+        <div class="messages">
+            <div class="messages-content"></div>
+        </div>
+        <!-- Message input box and send button -->
+        <div class="message-box">
+            <textarea class="message-input" placeholder="Type message..."></textarea>
+            <button class="message-submit" type="submit">Send</button>
+        </div>
+        <!-- Page view count -->
+        <p style="text-align: center; color: white;">This page has been viewed <span id="page_view_no" style="font-weight: bolder;"></span> times</p>
+    </div>
 
-	<div class="chat">
-		<div class="chat-title">
-			<h1>Eni4sure [BOT]</h1>
-			<h2>Active</h2>
-			<div class="avatar">
-				<img src="assets/img/me.png" />
-			</div>
-		</div>
-		<div class="messages">
-			<div class="messages-content"></div>
-		</div>
-		<div class="message-box">
-			<textarea type="text" class="message-input" placeholder="Type message..."></textarea>
-			<button type="submit" class="message-submit">Send</button>
-		</div>
-		<p style="text-align: center; color: white;">This page has been viewed <span id="page_view_no" style="font-weight: bolder;"></span> times</p>
-	</div>
-
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js"></script>
-	<script type="text/javascript" src="assets/js/main.js"></script>
+    <!-- JavaScript libraries and custom scripts -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>
